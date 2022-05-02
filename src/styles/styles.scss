@@ -1,0 +1,11 @@
+@import 'variables';
+
+html, body {padding: 0; margin: 0;}
+
+:root {--navbar-height: 100px;}
+
+body {font-family: $font; font-size: $font-size-body;}
+
+.content {width: 100%; max-width: $container-width; margin: 0 auto;}
+
+.page {padding: $pagepadding;}
