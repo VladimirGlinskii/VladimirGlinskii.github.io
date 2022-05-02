@@ -1,14 +1,21 @@
 import Navbar from '@components/navbar';
-import React from 'react';
+import React, { FC } from 'react';
 import './app.scss';
 import MainPage from '@pages/main';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
-const App = () => {
+const App: FC = () => {
   return (
-    <div className="App">
-      <Navbar />
-      <MainPage />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path='/'
+            element={<Navigate replace to="/about" />} />
+          <Route path='/about' element={<MainPage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

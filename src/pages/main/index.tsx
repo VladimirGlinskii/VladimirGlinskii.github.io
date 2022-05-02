@@ -3,8 +3,10 @@ import './main.scss';
 
 const MainPage = () => {
   return (
-    <div className="main">
-      Main
+    <div className="page main">
+      <div className="content">
+        Main
+      </div>
     </div>
   );
 }

@@ -2,10 +2,33 @@
 
 html, body {padding: 0; margin: 0;}
 
-:root {--navbar-height: 100px;}
+:root {
+  --navbar-height: 80px;
+  --color-secondary-lighter: #8ecae6;
+  --color-secondary-light: #219ebc;
+  --color-secondary: #023047;
+  // --color-primary-light: #ffb703;
+  // --color-primary: #fb8500;
+  --color-primary-lighter: #e9c46a;
+  --color-primary-light: #f4a261;
+  --color-primary: #e76f51;
+  --color-blue: #4062BB;
+  --color-blue-green: #59C3C3;
+  --color-pink: #F45B69;
+  --color-purple: #52489C;
+  --color-white: #FFFFFF;
+  --color-ghostwhite: #F8F8FF;
+  --color-black: #0a0a0a;
+  --color-danger: #e63946;
+  --color-gray: #e5e5e5;
+  --color-honeydew: #f1faee;
+  --color-platinum: #EBEBEB;
+}
 
-body {font-family: $font; font-size: $font-size-body;}
+body {font-family: $font; font-size: $font-size-body; color: var(--color-black);}
 
 .content {width: 100%; max-width: $container-width; margin: 0 auto;}
 
 .page {padding: $pagepadding;}
+
+a {text-decoration: none; cursor: pointer; font: inherit; color: inherit;}

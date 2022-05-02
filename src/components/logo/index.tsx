@@ -1,10 +1,12 @@
 import * as React from 'react';
+import './logo.scss';
 
 function Logo() {
   return (
-    <div className="logo">
-      VG
-    </div>
+    <a href='/' className="logo">
+      <span className="logo-g">G</span>
+      <span className="logo-v">V</span>
+    </a>
   );
 }
 

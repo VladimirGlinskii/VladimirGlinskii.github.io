@@ -1,5 +1,7 @@
+import AppLink from '@components/link';
 import Logo from '@components/logo';
 import * as React from 'react';
+import './navbar.scss';
 
 function Navbar() {
   return (
@@ -7,12 +9,12 @@ function Navbar() {
       <div className="content navbar-content">
         <Logo />
         <div className="navbar-nav">
-          <div className="navbar-item">
+          <AppLink to="/about" className="navbar-item">
             Обо мне
-          </div>
-          <div className="navbar-item">
+          </AppLink>
+          <AppLink to="/projects" className="navbar-item">
             Проекты
-          </div>
+          </AppLink>
         </div>
       </div>
     </div>

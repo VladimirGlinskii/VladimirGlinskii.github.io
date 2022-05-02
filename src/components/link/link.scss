@@ -1,0 +1,5 @@
+.link {font-weight: 500; color: var(--color); transition: color 0.4s;
+  &-default {--color: var(--color-black);
+    &:hover {--color: var(--color-primary);}
+  }
+}
