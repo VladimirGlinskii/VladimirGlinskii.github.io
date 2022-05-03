@@ -1,7 +1,7 @@
-import React from 'react';
+import { FC } from 'react';
 import './main.scss';
 
-const MainPage = () => {
+const MainPage: FC = () => {
   return (
     <div className="page main">
       <div className="content">
@@ -9,6 +9,6 @@ const MainPage = () => {
       </div>
     </div>
   );
-}
+};
 
 export default MainPage;

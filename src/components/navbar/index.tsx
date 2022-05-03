@@ -1,9 +1,9 @@
 import AppLink from '@components/link';
 import Logo from '@components/logo';
-import * as React from 'react';
+import { FC } from 'react';
 import './navbar.scss';
 
-function Navbar() {
+const Navbar: FC = () => {
   return (
     <div className="navbar">
       <div className="content navbar-content">
@@ -19,6 +19,6 @@ function Navbar() {
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;

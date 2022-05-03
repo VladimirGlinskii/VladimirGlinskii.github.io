@@ -1,5 +1,5 @@
 import Navbar from '@components/navbar';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import './app.scss';
 import MainPage from '@pages/main';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
@@ -17,6 +17,6 @@ const App: FC = () => {
       </div>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

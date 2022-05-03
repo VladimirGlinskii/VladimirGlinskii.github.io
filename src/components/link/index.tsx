@@ -9,6 +9,7 @@ interface Props extends Omit<NavLinkProps, 'className'> {
 
 const AppLink: React.FC<Props> = ({ to, children, className, ...props }) => {
   const classes = 'link link-default ' + className;
+
   return (
     <NavLink to={to}
       className={classes}
@@ -16,6 +17,6 @@ const AppLink: React.FC<Props> = ({ to, children, className, ...props }) => {
       {children}
     </NavLink>
   );
-}
+};
 
 export default AppLink;
