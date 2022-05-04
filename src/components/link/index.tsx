@@ -1,21 +1,22 @@
+import classNames from 'classnames';
 import * as React from 'react';
-import { NavLink, NavLinkProps } from 'react-router-dom';
+import { NavHashLink, NavHashLinkProps } from 'react-router-hash-link';
 import './link.scss';
 
-interface Props extends Omit<NavLinkProps, 'className'> {
+interface Props extends Omit<NavHashLinkProps, 'className'> {
   className?: string;
   variant?: 'default';
 }
 
-const AppLink: React.FC<Props> = ({ to, children, className, ...props }) => {
-  const classes = 'link link-default ' + className;
+const AppLink: React.FC<Props> = ({ to, children, className, variant, ...props }) => {
+  const classes = classNames('link', `link-${variant || 'default'}`, className);
 
   return (
-    <NavLink to={to}
+    <NavHashLink to={to}
       className={classes}
       {...props}>
       {children}
-    </NavLink>
+    </NavHashLink>
   );
 };
 

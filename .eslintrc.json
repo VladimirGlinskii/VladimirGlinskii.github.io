@@ -148,7 +148,8 @@
                             "requireLast": false
                         }
                     }
-                ]
+                ],
+                "jsx-a11y/alt-text": "off"
             }
         }
     ]

@@ -1,17 +1,16 @@
 @import 'variables';
-
-html, body {padding: 0; margin: 0;}
+@import 'grid';
 
 :root {
   --navbar-height: 80px;
   --color-secondary-lighter: #8ecae6;
   --color-secondary-light: #219ebc;
   --color-secondary: #023047;
-  // --color-primary-light: #ffb703;
-  // --color-primary: #fb8500;
   --color-primary-lighter: #e9c46a;
-  --color-primary-light: #f4a261;
-  --color-primary: #e76f51;
+  --color-primary-light: #ffb703;
+  --color-primary: #fb8500;
+  // --color-primary-light: #f4a261;
+  // --color-primary: #e76f51;
   --color-blue: #4062BB;
   --color-blue-green: #59C3C3;
   --color-pink: #F45B69;
@@ -23,12 +22,25 @@ html, body {padding: 0; margin: 0;}
   --color-gray: #e5e5e5;
   --color-honeydew: #f1faee;
   --color-platinum: #EBEBEB;
+  --color-silver: #878a8f;
 }
 
-body {font-family: $font; font-size: $font-size-body; color: var(--color-black);}
+html, body {padding: 0; margin: 0; min-height: 100%; height: 100%;}
+
+html {font-family: $font; font-size: $font-size-body; color: var(--color-black); line-height: 1.4em;}
+
+body {overflow-x: hidden;}
+
+h1, h2, h3, h4 {margin: 0; padding: 0; line-height: 1.5em;}
+h1 {font-size: $font-size-h1; font-weight: bold;}
+h2 {font-size: $font-size-h2; font-weight: 600;}
+h3 {font-size: $font-size-h3; font-weight: 600;}
+h4 {font-size: $font-size-h4; font-weight: 600;}
+
+p {margin: 0;}
+a {text-decoration: none; cursor: pointer; color: inherit;}
+button {padding: 0; margin: 0; background: none; outline: none; border: none; font: inherit; cursor: pointer;}
 
 .content {width: 100%; max-width: $container-width; margin: 0 auto;}
 
-.page {padding: $pagepadding;}
-
-a {text-decoration: none; cursor: pointer; font: inherit; color: inherit;}
+.page {padding: 0 $pagepadding;}

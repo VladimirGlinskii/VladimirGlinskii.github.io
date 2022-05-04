@@ -9,10 +9,13 @@ const Navbar: FC = () => {
       <div className="content navbar-content">
         <Logo />
         <div className="navbar-nav">
-          <AppLink to="/about" className="navbar-item">
+          <AppLink to="/#about" className="navbar-item navbar-link">
             Обо мне
           </AppLink>
-          <AppLink to="/projects" className="navbar-item">
+          <AppLink to="/#skills" className="navbar-item navbar-link">
+            Навыки
+          </AppLink>
+          <AppLink to="/projects" className="navbar-item navbar-link">
             Проекты
           </AppLink>
         </div>
