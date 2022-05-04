@@ -12,7 +12,7 @@ const InfoSection: FC = () => {
     <Section className='info-section'>
       <Anchor id='about' />
       <div className="content">
-        <SectionTitle className=''>
+        <SectionTitle>
           Обо мне
         </SectionTitle>
         <div className="row info-section-cards">

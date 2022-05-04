@@ -41,6 +41,8 @@ p {margin: 0;}
 a {text-decoration: none; cursor: pointer; color: inherit;}
 button {padding: 0; margin: 0; background: none; outline: none; border: none; font: inherit; cursor: pointer;}
 
-.content {width: 100%; max-width: $container-width; margin: 0 auto;}
+.content {width: 100%; max-width: $container-width; margin: 0 auto;
+  &-small {max-width: $container-width-small;}
+}
 
 .page {padding: 0 $pagepadding;}

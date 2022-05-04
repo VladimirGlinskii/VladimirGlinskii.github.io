@@ -1,5 +1,5 @@
 .logo {height: 50px; width: 50px; position: relative; display: inline-flex; align-items: center; justify-content: center;
-  font-size: 50px; background-color: var(--color-secondary); border-radius: 50% 0;
+  font-size: 50px; background-color: var(--color-secondary); border-radius: 16px 0;
   &-v {position: absolute; color: var(--color-honeydew);}
   &-g {position: absolute; color: var(--color-secondary-light); font-weight: bold;}
 }
