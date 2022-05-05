@@ -1,1 +1,3 @@
-.projects {}
+.projects {text-align: center;
+  &-dev {width: 100%; max-width: 800px; margin: 12rem auto;}
+}
