@@ -7,7 +7,7 @@ const Navbar: FC = () => {
   return (
     <div className="navbar">
       <div className="content navbar-content">
-        <Logo />
+        <Logo className='navbar-logo' />
         <div className="navbar-nav">
           <AppLink to="/#about" className="navbar-item navbar-link">
             Обо мне

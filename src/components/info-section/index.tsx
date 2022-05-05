@@ -16,14 +16,14 @@ const InfoSection: FC = () => {
           Обо мне
         </SectionTitle>
         <div className="row info-section-cards">
-          <div className="col col-33">
+          <div className="col col-33 col-mobile-100">
             <InfoSectionCard image={dev} variant='in-progress'>
               <InfoSectionCardText>
                 В коммерческой разработке с декабря 2020 года
               </InfoSectionCardText>
             </InfoSectionCard>
           </div>
-          <div className="col col-33">
+          <div className="col col-33 col-mobile-100">
             <InfoSectionCard image={diploma} variant='done'>
               <InfoSectionCardText>
                 Окончил бакалавриат ОмГУ в 2021 году по направлению
@@ -35,7 +35,7 @@ const InfoSection: FC = () => {
               </InfoSectionCardText>
             </InfoSectionCard>
           </div>
-          <div className="col col-33">
+          <div className="col col-33 col-mobile-100">
             <InfoSectionCard image={master} variant='in-progress'>
               <InfoSectionCardText>
                 Учусь в магистратуре ОмГУ на том же направлении

@@ -24,12 +24,12 @@ const Skill: FC<Props> = ({ className, direction, children, name, image, level, 
         </div>
       </div>
       <div className="row skill-body">
-        <div className="col col-75">
+        <div className="col col-75 col-mobile-100">
           <div className="skill-content">
             {children}
           </div>
         </div>
-        <div className="col col-25">
+        <div className="col col-25 col-mobile-100">
           <img src={image} className="skill-image" />
         </div>
       </div>

@@ -1,12 +1,12 @@
 @import'/src/styles/variables';
 
 .info-section {position: relative;
-  &-cards {margin-bottom: 3rem;}
+  &-cards .col {margin-bottom: 3rem;}
   &-about {padding: 3rem; background-color: var(--color-honeydew); border-radius: 0 2rem 0 2rem; position: relative;
     h3 {margin-bottom: 1em; position: relative; padding-bottom: 1em;
       &::after {content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background-color: var(--color-blue-green);}
     }
-    p {margin-bottom: 1rem; font-weight: 500; text-align: justify; font-size: $font-size-big;}
+    p {margin-bottom: 1rem; font-weight: 500; text-align: justify; font-size: $font-size-big; line-height: 1.4em;}
     em {font-style: normal; color: var(--color-primary);
       &:nth-of-type(2n) {color: var(--color-secondary-light);}
     }

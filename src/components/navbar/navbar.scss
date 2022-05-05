@@ -8,7 +8,10 @@
       background-image: linear-gradient(90deg, rgba(0, 0, 0,0) 0%, var(--color-secondary-light) 5%, var(--color-secondary-light) 95%, rgba(0, 0, 0, 0) 100%);
     }
   }
-  &-nav {margin-left: auto; margin-right: -2rem; display: flex; align-items: center;}
+  &-logo {margin-right: 2rem;}
+  &-nav {margin-left: auto; margin-right: -2rem; display: flex; align-items: center;
+    row-gap: 1rem; justify-content: flex-end; flex-wrap: wrap;
+  }
   &-item {margin-right: 2rem;}
   &-link {font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; display: inline-block; position: relative;
     &::after {position: absolute; left: 0; right: 0; bottom: -0.5em; content: ''; height: 2px; 
