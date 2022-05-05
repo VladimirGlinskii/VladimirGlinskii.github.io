@@ -1,1 +1,3 @@
-.skills-section {position: relative; margin-bottom: 0;}
+.skills-section {position: relative; margin-bottom: 0;
+  &-skill {margin-bottom: 3rem;}
+}

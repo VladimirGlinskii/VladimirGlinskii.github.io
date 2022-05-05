@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { FC, HTMLAttributes } from 'react';
+import { CSSProperties, FC, HTMLAttributes } from 'react';
 import './skill.scss';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -11,9 +11,10 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 const Skill: FC<Props> = ({ className, direction, children, name, image, level, ...rest }) => {
   const classes = classNames('skill', `skill-${direction || 'right'}`, className);
+  const levelColor = `hsl(${(level / 10) * 120}, 100%, 50%)`;
 
   return (
-    <div {...rest} className={classes}>
+    <div {...rest} style={{ '--level-color': levelColor } as CSSProperties} className={classes}>
       <div className="skill-header">
         <h3 className="skill-title">
           {name}
