@@ -1,0 +1,16 @@
+@keyframes reset {
+  100% {transform: none; opacity: 1;}
+}
+
+@keyframes reset-transform {
+  100% {transform: none;}
+}
+
+.fadeonscroll {opacity: 0; transition-property: opacity, transform; transition-duration: 1s;
+  &-bottom {transform-origin: 50% 100%; --translateY: 100px; transform: translateY(var(--translateY));}
+  &-bottom-growing {transform-origin: 50% 100%; --translateY: 100px; transform: scale(0) translateY(var(--translateY));}
+  &-bottom-shrinking {transform-origin: 50% 100%; --translateY: 100px; transform: scale(2) translateY(var(--translateY));}
+  &-left {transform-origin: 0% 50%; transform: translateX(-100px);}
+  &-active {opacity: 1; transform: none;}
+}
+

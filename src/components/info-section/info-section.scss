@@ -1,7 +1,7 @@
 @import'/src/styles/variables';
 
 .info-section {position: relative;
-  &-cards .col {margin-bottom: 3rem;}
+  &-card {margin-bottom: 3rem;}
   &-about {padding: 3rem; background-color: var(--color-honeydew); border-radius: 0 2rem 0 2rem; position: relative;
     h3 {margin-bottom: 1em; position: relative; padding-bottom: 1em;
       &::after {content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background-color: var(--color-blue-green);}
@@ -16,4 +16,10 @@
   }
   &-ronas {color: #26a0f8; font-weight: 600;}
   &-thumbtech {color: #95c12c; font-weight: 600;}
+  @media (min-width: $mobile) {
+    &-cards {
+      .col:nth-child(2) .info-section-card {transition-delay: 0.4s;}
+      .col:nth-child(3) .info-section-card {transition-delay: 0.8s;}
+    }
+  }
 }

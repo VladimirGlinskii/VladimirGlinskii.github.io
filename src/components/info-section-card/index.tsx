@@ -1,17 +1,29 @@
 import classNames from 'classnames';
-import { FC, PropsWithChildren } from 'react';
+import useOnScroll from 'hooks/use-on-scroll';
+import { FC, PropsWithChildren, useRef, HTMLAttributes } from 'react';
 import './info-section-card.scss';
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLDivElement> {
   image: string;
   variant: 'done' | 'in-progress';
 }
 
-const InfoSectionCard: FC<PropsWithChildren<Props>> = ({ image, variant, children }) => {
-  const classes = classNames('info-section-card', `info-section-card-${variant}`);
+const InfoSectionCard: FC<Props> = ({ image, variant, children, className }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isScrolled = useOnScroll(ref);
+
+  const classes = classNames(
+    'info-section-card',
+    'fadeonscroll fadeonscroll-bottom',
+    `info-section-card-${variant}`,
+    {
+      'fadeonscroll-active': isScrolled
+    },
+    className
+  );
 
   return (
-    <div className={classes}>
+    <div ref={ref} className={classes}>
       <div className="info-section-card-image">
         <img src={image} />
       </div>

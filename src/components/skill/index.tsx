@@ -1,5 +1,6 @@
 import classNames from 'classnames';
-import { CSSProperties, FC, HTMLAttributes } from 'react';
+import useOnScroll from 'hooks/use-on-scroll';
+import { CSSProperties, FC, HTMLAttributes, useRef } from 'react';
 import './skill.scss';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -10,11 +11,22 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 }
 
 const Skill: FC<Props> = ({ className, direction, children, name, image, level, ...rest }) => {
-  const classes = classNames('skill', `skill-${direction || 'right'}`, className);
+  const ref = useRef<HTMLDivElement>(null);
+  const isScrolled = useOnScroll(ref);
+
+  const classes = classNames(
+    'skill',
+    'fadeonscroll fadeonscroll-bottom',
+    `skill-${direction || 'right'}`,
+    {
+      'fadeonscroll-active': isScrolled
+    },
+    className
+  );
   const levelColor = `hsl(${(level / 10) * 120}, 100%, 50%)`;
 
   return (
-    <div {...rest} style={{ '--level-color': levelColor } as CSSProperties} className={classes}>
+    <div ref={ref} {...rest} style={{ '--level-color': levelColor } as CSSProperties} className={classes}>
       <div className="skill-header">
         <h3 className="skill-title">
           {name}
