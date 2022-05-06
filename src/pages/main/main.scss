@@ -1,5 +1,7 @@
-.main {
-  &-top {margin-top: 10rem; box-sizing: border-box; text-align: center; overflow: hidden;
+@import '/src/styles/variables';
+
+.main {overflow: hidden;
+  &-top {margin-top: 10rem; box-sizing: border-box; text-align: center; 
     h1 {color: var(--color-silver); transform: translateX(-200px); opacity: 0; animation: 1s reset forwards;}
     h2 {margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--color-secondary);
       transform: translateX(200px); opacity: 0; animation: 1s reset forwards;
@@ -15,6 +17,14 @@
     &::after {content: ''; left: 0; top: 0; width: 100%; height: 100%; position: absolute;
       border: 4px outset var(--color-secondary-light); border-radius: 50%; box-sizing: border-box;
       transform: rotate(360deg); animation: 5s reset infinite linear;
+    }
+  }
+  @media (max-width: $mobile) {
+    &-top {
+      h1 {font-size: 30px;}
+    }
+    &-me {
+      &-container {max-width: 300px;}
     }
   }
 }

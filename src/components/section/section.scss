@@ -1,11 +1,16 @@
 @import '/src/styles/variables';
 
 .section {margin-bottom: 10rem;
-  &-alt {color: var(--color-white); position: relative; padding: 5rem $pagepadding; margin: 15rem -#{$pagepadding} 15rem;
+  &-alt {color: var(--color-white); position: relative; padding: 5rem $pagepadding; margin: 15rem -#{$pagepadding};
     background-color: var(--color-secondary);
     &::before {content: ''; position: absolute; right: 0; top: -5rem;
       z-index: -1; width: 100%; border-bottom: 5rem solid var(--color-secondary); border-right: 100vw solid transparent;
     }
   }
   &-title {text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 3rem; text-align: center;}
+  @media (max-width: $mobile) {margin-bottom: 6rem;
+    &-alt {margin: 10rem -#{$pagepadding};
+      &::before {top: -3rem; border-bottom: 3rem solid var(--color-secondary);}
+    }
+  }
 }
